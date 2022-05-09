@@ -1,8 +1,19 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Cart = () => {
+const Cart = (props) => {
+    console.log(props)
+    // const products = props.getCart();
+    // console.log(props);
+    // console.log(products);
+
     return(
-        <div>This is Cart</div>
+        <div>this is cart
+            <ul>
+             
+            </ul>
+            
+        </div>
     )
 }
 
