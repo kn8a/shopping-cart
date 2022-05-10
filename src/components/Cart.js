@@ -13,7 +13,8 @@ const Cart = (props) => {
     }
 
     return(
-        <div className='cart-items'>this is cart
+        <div className='cart-items'>
+            <h2>Cart</h2>
             
                 {products.map(product => {
                     return(
@@ -28,15 +29,17 @@ const Cart = (props) => {
                                         <div>Price: {' ' + '$' + product.price + ' '}</div>
                                         <div>
                                             Quantity:{' '} 
-                                            <button>-</button>
+                                            <button onClick={()=>props.reduceQty(product.id)}>-</button>
                                             {' ' + product.qty + ' '}
-                                            <button>+</button>
+                                            <button onClick={()=>props.addToCart(product.id)}>+</button>
+                                            {' '}
+                                            <button onClick={()=>props.removeItem(product.id)}>Remove item</button>
                                         </div>
                                     
                                 </div>
                             </div>
                             <div className='item-total'>
-                                <div>{product.total}</div>
+                                <div>{'$'+product.total}</div>
 
                             </div>
                             

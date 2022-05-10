@@ -11,7 +11,7 @@ import './styles/app.css';
 function App() {
 
   const [cart, setCart] = useState([]);
-  const [totalQty, settotalQty] = useState([]);
+  const [totalQty, setTotalQty] = useState((0));
   const [products, setProducts] = useState([]);
 
 
@@ -37,10 +37,35 @@ function App() {
         }
       })
       setCart(newCart);
+      
       console.log(cart);
     }
+    setTotalQty(totalQty+1)
   }
-  
+
+  const removeFromCart = (itemId) => {
+    const arrayToRemove = cart.filter(({id}) => id == itemId)
+    const itemToRemove = arrayToRemove[0]
+    const arrayToKeep = cart.filter(({id}) => id !== itemId)
+    setCart(arrayToKeep);
+    setTotalQty(totalQty-(itemToRemove.qty)) 
+  }
+
+  const reduceCartQty = (id) => {
+    const newCart = cart.map(p => {
+      if (p.id == id && p.qty > 1) {
+           setTotalQty(totalQty-1)
+          return {...p, qty: p.qty-1}
+      }
+      else {
+        return {...p}
+      }
+    })
+    setCart(newCart)
+    
+  }
+
+
 
   function checkForMatch(cart, id){ //checks if item ID already in cart
     for(let i = 0; i < cart.length; i++){
@@ -55,17 +80,16 @@ function App() {
     <div className="App">
       
       <BrowserRouter>
-        <Nav/>
+        <Nav qty={totalQty}/>
         <Routes>
             <Route index element={<Home />} />
             <Route path="/" element={<Home />} />
             <Route path="/home/" element={<Home />} />
             <Route path="/products/"  exact element={<Products addToCart={addToCart} products={products}/>} />
             <Route path="/products/:category/:id" element={<ProductDetail addToCart={addToCart} products={products}/>} />
-            <Route path="/cart/" element={<Cart items={cart} />}/>
+            <Route path="/cart/" element={<Cart removeItem={removeFromCart} reduceQty={reduceCartQty} addToCart={addToCart} items={cart} />}/>
         </Routes>
       </BrowserRouter>
-      <button>test</button>
     </div>
   );
 }
