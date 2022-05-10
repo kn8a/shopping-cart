@@ -55,14 +55,14 @@ const ProductDetail = (props) => {
                 </div>
                 <p>{product.description}</p>
                 <h3>${product.price}</h3>
-                <button>Add to cart</button>
+                <button onClick={()=>props.addToCart(product.id)}>Add to Cart</button>
 
                 
             </div>
             <div>
                 <p>Related products:</p>
                 <Related related={related}/>
-                <Products products={randomRelated}/>
+                <Products products={randomRelated} addToCart={props.addToCart}/>
                 
             </div>
         </div> 

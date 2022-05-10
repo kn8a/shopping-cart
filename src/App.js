@@ -14,16 +14,11 @@ function App() {
   const [totalQty, settotalQty] = useState([]);
   const [products, setProducts] = useState([]);
 
+
   useEffect(() => {
       setProducts(allProducts);
      },[])
-        
-  // const fetchProducts = async() => {
-  //     const data = await fetch('https://fakestoreapi.com/products');
-  //     const fetchedProducts = await data.json();
-  //     console.log(fetchedProducts);
-  //     setProducts(fetchedProducts);
-  //     }
+
 
   const addToCart = (item) => {
     const filteredProduct = products.filter(({id}) => id == item)
@@ -45,6 +40,7 @@ function App() {
       console.log(cart);
     }
   }
+  
 
   function checkForMatch(cart, id){ //checks if item ID already in cart
     for(let i = 0; i < cart.length; i++){
@@ -54,14 +50,12 @@ function App() {
     return false;
   }
 
-  const passCart = () => {
-    return (cart)
-  }
 
   return (
     <div className="App">
-      <Nav/>
+      
       <BrowserRouter>
+        <Nav/>
         <Routes>
             <Route index element={<Home />} />
             <Route path="/" element={<Home />} />

@@ -1,0 +1,35 @@
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px lightgray solid;
+    padding: 0.5rem;
+    gap: 2rem;
+}
+
+.cart-item-left{
+    display: flex;
+    gap: 1rem;
+}
+
+.cart-image {
+    object-fit: scale-down;
+    height: 50px;
+    width: 50px;
+}
+
+.cart-item-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cart-qty{
+    display: flex;
+}
