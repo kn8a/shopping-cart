@@ -33,3 +33,17 @@
 .cart-qty{
     display: flex;
 }
+
+.cart-total {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+}
+
+.order-total{
+    font-weight: 700;
+    font-size: 1.1rem;
+}

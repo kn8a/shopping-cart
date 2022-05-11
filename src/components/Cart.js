@@ -8,6 +8,16 @@ const Cart = (props) => {
         return {...item, total: itemTotal(item.qty, item.price)}
     });
 
+    const cartTotal = sumArray(products);
+
+    function sumArray(array) {
+        let sum = 0;
+        for (let i=0; i < array.length; i++ ) {
+            sum = sum + Number(array[i].total)
+        }
+        return sum.toFixed(2);
+    }
+
     function itemTotal(qty, price) {
         return ((Number(qty)*Number(price)).toFixed(2))
     }
@@ -50,6 +60,11 @@ const Cart = (props) => {
                     )
                     
                 })}
+            
+            <div className='cart-total'>
+                <div>Order total:</div> 
+                <div className='order-total'>{'$'+cartTotal}</div>
+            </div>
             
             
         </div>
