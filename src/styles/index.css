@@ -2,4 +2,12 @@
 body {
     display: flex;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    width: 100%;
+}
+
+#root {
+    display: flex;
+    width: 100%;
+    flex:1;
 }

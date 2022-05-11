@@ -1,8 +1,9 @@
 .cart-items {
     display: flex;
     flex-direction: column;
-    width: 100%;
     flex: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .cart-item {
@@ -32,6 +33,7 @@
 
 .cart-qty{
     display: flex;
+    align-items: center;
 }
 
 .cart-total {
@@ -46,4 +48,25 @@
 .order-total{
     font-weight: 700;
     font-size: 1.1rem;
+}
+
+.remove-button {
+    margin-left: 1rem;
+    color: darkred;
+}
+
+.cart-checkout {
+    display: flex;
+    justify-content:right;
+    padding-top: 1rem;
+}
+
+.checkout {
+    background-color: darkcyan;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    border: 0;
+    cursor: pointer;
 }
