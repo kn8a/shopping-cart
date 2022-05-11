@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/cart.css'
+import Icon from '@mdi/react'
+import { mdiCart, mdiHome, mdiShopping, mdiCartMinus, mdiCartPlus, mdiCartRemove, mdiPlusCircleOutline, mdiMinusCircleOutline } from '@mdi/js'; 
 
 const Cart = (props) => {
     
@@ -43,7 +45,7 @@ const Cart = (props) => {
                                             {' ' + product.qty + ' '}
                                             <button onClick={()=>props.addToCart(product.id)}>+</button>
                                             {' '}
-                                            <button onClick={()=>props.removeItem(product.id)}>Remove item</button>
+                                            <button className='remove-button' onClick={()=>props.removeItem(product.id)}>Remove from cart</button>
                                         </div>
                                     
                                 </div>
@@ -52,21 +54,16 @@ const Cart = (props) => {
                                 <div>{'$'+product.total}</div>
 
                             </div>
-                            
-                            
-
-                        </div>
-                        
+                        </div> 
                     )
-                    
                 })}
-            
             <div className='cart-total'>
                 <div>Order total:</div> 
                 <div className='order-total'>{'$'+cartTotal}</div>
             </div>
-            
-            
+            <div className='cart-checkout'>
+                <button className='checkout'>Checkout</button>
+            </div>
         </div>
     )
 }
