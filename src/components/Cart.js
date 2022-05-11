@@ -20,6 +20,10 @@ const Cart = (props) => {
         return sum.toFixed(2);
     }
 
+    const checkout = () => {
+        alert(`Your purchase in the amount of $${cartTotal} would have been greatly appreciated, however, this isn't a real store, and the products here aren't real. Thank you for visiting this fake store.`)
+    }
+
     function itemTotal(qty, price) {
         return ((Number(qty)*Number(price)).toFixed(2))
     }
@@ -62,7 +66,7 @@ const Cart = (props) => {
                 <div className='order-total'>{'$'+cartTotal}</div>
             </div>
             <div className='cart-checkout'>
-                <button className='checkout'>Checkout</button>
+                <button onClick={checkout} className='checkout' >Checkout</button>
             </div>
         </div>
     )

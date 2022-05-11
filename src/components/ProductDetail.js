@@ -39,23 +39,29 @@ const ProductDetail = (props) => {
         <div>
             <div className='product-details'>
                 <h1>{product.title}</h1>
-                
-                <p>
-                <div><Rating fractions={2} emptySymbol={<img src={starOutline} alt='empty star' className="icon" />} fullSymbol={<img src={star} alt='star' className="icon" />} initialRating={product.rating.rate} readonly/> {product.rating.rate}/5</div>
-                <div>Based on{" " + product.rating.count} reviews</div>
-                </p>
-                <div>
-                    <Zoom>
-                        <img
-                        alt="that wanaka tree"
-                        src={product.image}
-                        width="300"
-                        />
-                    </Zoom>
+                <div className='product-img-info'>
+                    <div>
+                        <Zoom>
+                            <img
+                            alt={product.title}
+                            src={product.image}
+                            width="300"
+                            />
+                        </Zoom>
+                    </div>
+                    <div className='product-info-desc'>
+                        <h4>Description:</h4>
+                        <p>{product.description}</p>
+                        <h4>Reviews:</h4>
+                        <div><Rating fractions={2} emptySymbol={<img src={starOutline} alt='empty star' className="icon" />} fullSymbol={<img src={star} alt='star' className="icon" />} initialRating={product.rating.rate} readonly/> {product.rating.rate}/5</div>
+                        <div>Based on{" " + product.rating.count} reviews</div>
+                        
+                        <h2>Price: ${product.price}</h2>
+                        <button className='checkout' onClick={()=>props.addToCart(product.id)}>Add to Cart</button>
+                    </div>
                 </div>
-                <p>{product.description}</p>
-                <h3>${product.price}</h3>
-                <button onClick={()=>props.addToCart(product.id)}>Add to Cart</button>
+                
+                
 
                 
             </div>

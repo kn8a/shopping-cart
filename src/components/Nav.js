@@ -14,7 +14,7 @@ const Nav = (props) => {
             
                 <Link className="menu-item" to={'/home'}>
                     <Icon  className='menu-icon' path={mdiHome}
-                            title="Cart"
+                            title="Home"
                             size={1.5}
                             color="darkcyan"
                             />
@@ -23,7 +23,7 @@ const Nav = (props) => {
             
             <Link className="menu-item" to={'/products'}>
                 <Icon className="menu-icon" path={mdiShopping}
-                            title="Cart"
+                            title="Products"
                             size={1.5}
                             color="darkcyan"
                             />

@@ -4,7 +4,22 @@
     width: 50%;
 }
 
-.product-detail {
+.product-details {
     display: flex;
+    margin-top: 1rem;
     flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+    padding-left: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.product-img-info{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.product-info-desc{
+    padding-right: 5%;
+    padding-left: 5%;
 }
