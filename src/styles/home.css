@@ -1,0 +1,10 @@
+.home {
+    
+    width: 100%;
+    }
+
+    .home-image{
+        object-fit: scale-down;
+        
+        width: 100%;
+    }

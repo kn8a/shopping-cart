@@ -3,20 +3,20 @@ nav {
     justify-content: space-between;
     align-items:center;
     padding: 1rem;
-    border-bottom: darkcyan 2px solid;
-    margin-bottom: 1rem;
+    border-bottom: darkcyan 0px solid;
+    margin-bottom: 0;
     flex: 1;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
+    margin-right: 5vw;
 }
 
 .home-products{
     display: flex;
-    gap: 2rem;
+    gap: 3vw;
     flex: 1;
 }
 

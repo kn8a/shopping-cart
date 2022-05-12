@@ -1,8 +1,12 @@
 import React from 'react';
+import homeImg from '../img/shoponline.jpg'
+import '../styles/home.css'
 
 const Home = () => {
     return(
-        <div>This is Home</div>
+        <div className='home'>
+            <img className='home-image' src={homeImg} alt='shop online'/>
+        </div>
     )
 }
 
