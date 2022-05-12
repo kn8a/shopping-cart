@@ -3,6 +3,9 @@
     flex-wrap: wrap;
     flex: 1;
     gap: 24px;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .product {
@@ -34,10 +37,24 @@ img.product-image {
     flex-direction: column;
 }
 
+.product-info a{
+    color: darkcyan;
+}
+
 .purchase {
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: center;
+}
+
+.add-to-cart-button {
+    background-color: darkcyan;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+    border: 0;
+    cursor: pointer;
 }
 

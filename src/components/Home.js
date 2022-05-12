@@ -1,11 +1,12 @@
 import React from 'react';
 import homeImg from '../img/shoponline.jpg'
 import '../styles/home.css'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return(
         <div className='home'>
-            <img className='home-image' src={homeImg} alt='shop online'/>
+            <Link to={'/products'}><button className='home-button'>View All Products</button></Link>
         </div>
     )
 }

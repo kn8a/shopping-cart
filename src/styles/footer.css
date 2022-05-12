@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
     padding-left: 1vw;
     padding-right:1vw;
     padding-top: 1vh;
@@ -14,7 +13,7 @@
 }
 
 .footer a{
-    color: darkcyan;
+    color: rgb(44, 194, 194);
 }
 
 .footer ul {

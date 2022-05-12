@@ -15,7 +15,7 @@ const Footer = (props) => {
             <div className="credits">
                 <div>Created by kn8a / <a href="https://github.com/kn8a/shopping-cart">Source code</a></div>
                 <div>Products data sourced from <a href="https://fakestoreapi.com/">Fake Store API</a></div>
-                <div>Homepage Photo by <a href="https://unsplash.com/photos/mVhd5QVlDWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Anna Dziubinska</a> on Unsplash</div>
+                <div>Homepage Photo by <a href="https://unsplash.com/photos/wQ9VuP_Njr4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Lucrezia Carnelos</a> on Unsplash</div>
             </div>
             <div className="footer-logo">
                 <Link className='nav-logo' to={'/home'}><img alt="Store logo" src={logo}/></Link>

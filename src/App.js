@@ -73,11 +73,13 @@ function App() {
   return (
     <div className="App">
       
-      <BrowserRouter>
+      <BrowserRouter basename="/shopping-cart">
         <Nav qty={totalQty}/>
         <Routes>
             <Route index element={<Home />} />
+            <Route path="/shopping-cart/" element={<Home />} />
             <Route path="/" element={<Home />} />
+            <Route path="" element={<Home />} />
             <Route path="/home/" element={<Home />} />
             <Route path="/products/"  exact element={<Products addToCart={addToCart} products={products}/>} />
             <Route path="/products/:category/:id" element={<ProductDetail addToCart={addToCart} products={products}/>} />

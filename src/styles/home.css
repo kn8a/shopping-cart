@@ -1,6 +1,23 @@
 .home {
-    
     width: 100%;
+    background-image: url("../img/shoponline.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .home-button {
+        background-color: darkcyan;
+        color: white;
+        border-radius: 2rem;
+        padding: 1.8rem 2rem;
+        font-size: 2rem;
+        border: 0;
+        cursor: pointer;
     }
 
     .home-image{
