@@ -5,7 +5,7 @@ nav {
     padding: 1rem;
     border-bottom: darkcyan 0px solid;
     margin-bottom: 0;
-    flex: 1;
+
 }
 
 .nav-logo {
@@ -31,4 +31,8 @@ nav {
 .menu-icon{
     flex:1;
     justify-content: center;
+}
+
+nav a{
+    color: darkcyan;
 }

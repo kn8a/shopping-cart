@@ -3,4 +3,9 @@
     flex-direction: column;
     width: 100%;
     flex: 1;
+    min-height: 100vh;
+}
+
+.spacer {
+    flex: 1;
 }

@@ -7,6 +7,7 @@ import ProductDetail from "./components/ProductDetail";
 import allProducts from './products.json';
 import Nav from "./components/Nav";
 import './styles/app.css';
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -82,6 +83,8 @@ function App() {
             <Route path="/products/:category/:id" element={<ProductDetail addToCart={addToCart} products={products}/>} />
             <Route path="/cart/" element={<Cart removeItem={removeFromCart} reduceQty={reduceCartQty} addToCart={addToCart} items={cart} />}/>
         </Routes>
+        <div className="spacer"></div>
+        <Footer qty={totalQty}/>
       </BrowserRouter>
     </div>
   );
