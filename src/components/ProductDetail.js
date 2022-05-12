@@ -1,6 +1,4 @@
 import React from 'react';
-import { useEffect, useState } from "react";
-import uniqid from 'uniqid';
 import Categories from './Categories';
 import { Link, useParams } from 'react-router-dom';
 import Rating from 'react-rating';
@@ -22,18 +20,12 @@ import 'react-medium-image-zoom/dist/styles.css'
 const ProductDetail = (props) => {
 
     const params = useParams();
-
     const filteredProduct = products.filter(({id}) => id == params.id)
     const product = filteredProduct[0];
     const related = products.filter(({category}) => category == params.category);
     let relatedWithoutCurrent = related.filter(({id}) => id != params.id);
     relatedWithoutCurrent = relatedWithoutCurrent.sort(() => Math.random() - 0.5);
     const randomRelated = relatedWithoutCurrent.slice(0,4);
-
-
-
-    
-    
 
     return(
         <div>
@@ -59,11 +51,7 @@ const ProductDetail = (props) => {
                         <h2>Price: ${product.price}</h2>
                         <button className='checkout' onClick={()=>props.addToCart(product.id)}>Add to Cart</button>
                     </div>
-                </div>
-                
-                
-
-                
+                </div>   
             </div>
             <div>
                 <p>Related products:</p>

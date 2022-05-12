@@ -11,7 +11,6 @@ const Nav = (props) => {
             <Link className='nav-logo' to={'/home'}><img alt="Store logo" src={logo}/></Link>
         </div>
         <div className="home-products">
-            
                 <Link className="menu-item" to={'/home'}>
                     <Icon  className='menu-icon' path={mdiHome}
                             title="Home"
@@ -20,7 +19,6 @@ const Nav = (props) => {
                             />
                     <div>Home</div>
                 </Link>
-            
             <Link className="menu-item" to={'/products'}>
                 <Icon className="menu-icon" path={mdiShopping}
                             title="Products"
@@ -40,7 +38,6 @@ const Nav = (props) => {
                 {' '+ props.qty + ' items' }
             </Link>
         </div>
-
     </nav>
 )
 }

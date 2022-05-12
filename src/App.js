@@ -14,11 +14,9 @@ function App() {
   const [totalQty, setTotalQty] = useState((0));
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
       setProducts(allProducts);
      },[])
-
 
   const addToCart = (item) => {
     const filteredProduct = products.filter(({id}) => id == item)
@@ -37,7 +35,6 @@ function App() {
         }
       })
       setCart(newCart);
-      
       console.log(cart);
     }
     setTotalQty(totalQty+1)
@@ -62,10 +59,7 @@ function App() {
       }
     })
     setCart(newCart)
-    
   }
-
-
 
   function checkForMatch(cart, id){ //checks if item ID already in cart
     for(let i = 0; i < cart.length; i++){
@@ -74,7 +68,6 @@ function App() {
     }
     return false;
   }
-
 
   return (
     <div className="App">
