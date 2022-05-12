@@ -14,7 +14,7 @@ const Footer = (props) => {
             </div>
             <div className="credits">
                 <div>Created by kn8a / <a href="https://github.com/kn8a/shopping-cart">Source code</a></div>
-                <div>Products data sourced from <a href="https://fakestoreapi.com/">Fake Store API</a></div>
+                <div>Products data sourced from <a href="https://github.com/keikaavousi/fake-store-api">Fake Store API</a></div>
                 <div>Homepage Photo by <a href="https://unsplash.com/photos/wQ9VuP_Njr4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Lucrezia Carnelos</a> on Unsplash</div>
             </div>
             <div className="footer-logo">
