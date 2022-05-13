@@ -8,6 +8,9 @@ import allProducts from "./products.json";
 import Nav from "./components/Nav";
 import "./styles/app.css";
 import Footer from "./components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -18,13 +21,19 @@ function App() {
     setProducts(allProducts);
   }, []);
 
+  const Msg = ({ closeToast, toastProps }) => (
+    <div className="add-to-cart-alert">
+      <div>Added to cart</div>
+      <Link to="/cart">View cart</Link>
+    </div>
+  );
+
   const addToCart = (item) => {
     const filteredProduct = products.filter(({ id }) => id == item);
     const product = { ...filteredProduct[0], qty: 1 };
     if (!checkForMatch(cart, item)) {
       //if not in car, add
       setCart((state) => [...cart, product]);
-      console.log(cart);
     }
     if (checkForMatch(cart, item)) {
       //if in cart, qty+1
@@ -35,10 +44,11 @@ function App() {
           return { ...p };
         }
       });
+
       setCart(newCart);
-      console.log(cart);
     }
     setTotalQty(totalQty + 1);
+    notify();
   };
 
   const removeFromCart = (itemId) => {
@@ -67,6 +77,10 @@ function App() {
       if (cart[i].id == id) return true;
     }
     return false;
+  }
+
+  function notify() {
+    toast.success(<Msg />);
   }
 
   return (
@@ -102,6 +116,17 @@ function App() {
             }
           />
         </Routes>
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <div className="spacer"></div>
         <Footer qty={totalQty} />
       </BrowserRouter>

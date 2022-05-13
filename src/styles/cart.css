@@ -71,3 +71,7 @@
     border: 0;
     cursor: pointer;
 }
+
+.checkout:active{
+    transform: scale(0.9);
+}

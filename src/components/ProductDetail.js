@@ -7,11 +7,8 @@ import "../styles/productDetail.css";
 import star from "../img/star.png";
 import starOutline from "../img/star-outline.png";
 import Products from "./Products";
-import Related from "./Related";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-
-//import '../styles/product.css'
 
 const ProductDetail = (props) => {
   const params = useParams();
@@ -64,7 +61,6 @@ const ProductDetail = (props) => {
       </div>
       <div>
         <p>Related products:</p>
-        <Related related={related} />
         <Products products={randomRelated} addToCart={props.addToCart} />
       </div>
     </div>

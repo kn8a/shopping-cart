@@ -58,3 +58,6 @@ img.product-image {
     cursor: pointer;
 }
 
+.add-to-cart-button:active {
+    transform: scale(0.9);
+}
