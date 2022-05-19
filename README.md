@@ -2,75 +2,31 @@
 
 <img src=https://user-images.githubusercontent.com/88045655/169199931-1d8ff400-08e6-4477-8e7d-d89ddc3c4caf.JPG alt="Book Library" width="500">
 
-Demo: https://kn8a.github.io/shopping-cart/
+### Background
+This project is written using React JS and is the last project of the React chapter in TheOdinProject.
+https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart
 
+Live demo: https://kn8a.github.io/shopping-cart/
 
+### App Functionality
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Import products from JSON.
+- Using Router to load different elements.
+- Dynamic routing with category and product name.
+- Display products page w/ add-to-cart button
+- Display product details w/ add-to-cart button
+- Cart Qty update on Nav
+- Total each item and total all items in Cart.
+ 
+### Where I struggled
 
-## Available Scripts
+ - Getting props to pass through React Router. solved using `<Link>` and wrapping `<Nav>` in `<BrowserRouter>`.
+ - Setting the homepage to properly display in gh-pages. Solved with `<BrowserRouter basename="/shopping-cart">`
+ - Add-to-cart notification. Solved using React-Toastify.
 
-In the project directory, you can run:
+### What I Learned
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Greater understanding of React Hooks, specifically `useState` and `useEffect`
+ - Greater understanding of functional components and passing functions as props.
+ - How to use React Router and its limitations.
+ - Greater understanding of `filter` and `map` methods, as well as changing values of object properties inside of an array.
