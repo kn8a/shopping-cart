@@ -22,7 +22,6 @@ Live demo: https://kn8a.github.io/shopping-cart/
 
  - Getting props to pass through React Router. solved using `<Link>` and wrapping `<Nav>` in `<BrowserRouter>`.
  - Setting the homepage to properly display in gh-pages. Solved with `<BrowserRouter basename="/shopping-cart">`
- - Add-to-cart notification. Solved using React-Toastify.
 
 ### What I Learned
 
