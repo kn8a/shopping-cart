@@ -18,14 +18,9 @@ Live demo: https://kn8a.github.io/shopping-cart/
 - Cart Qty update on Nav
 - Total each item and total all items in Cart.
  
-### Where I struggled
+## How to use:
 
- - Getting props to pass through React Router. solved using `<Link>` and wrapping `<Nav>` in `<BrowserRouter>`.
- - Setting the homepage to properly display in gh-pages. Solved with `<BrowserRouter basename="/shopping-cart">`
-
-### What I Learned
-
- - Greater understanding of React Hooks, specifically `useState` and `useEffect`
- - Greater understanding of functional components and passing functions as props.
- - How to use React Router and its limitations.
- - Greater understanding of `filter` and `map` methods, as well as changing values of object properties inside of an array.
+1. Clone this repository.
+2.  Installation:  `npm install`
+3.  In the project directory, run:  `npm start`
+4. Open  [http://localhost:3000](http://localhost:3000/)  to view it in the browser. The page will reload if you make edits.
